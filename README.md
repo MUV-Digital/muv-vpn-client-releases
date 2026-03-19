@@ -25,3 +25,8 @@ Download the latest installer for your platform from the [Releases](../../releas
 ## Updates
 
 The app checks for updates automatically on launch and will prompt you to restart when a new version is available.
+
+| Platform | Auto-update |
+|---|---|
+| Windows | Works without signing |
+| macOS | **Does not work** — manually download and install each new `.dmg` release, then re-run `xattr -cr "/Applications/MUV VPN.app"`. |
