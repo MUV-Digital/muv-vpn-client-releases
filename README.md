@@ -1,7 +1,3 @@
-Here's the updated README:
-
----
-
 # MUV VPN
 
 MUV VPN is a desktop application that connects you securely to MUV Edge devices over WireGuard.
