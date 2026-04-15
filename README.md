@@ -1,3 +1,7 @@
+Here's the updated README:
+
+---
+
 # MUV VPN
 
 MUV VPN is a desktop application that connects you securely to MUV Edge devices over WireGuard.
@@ -21,16 +25,16 @@ Download the latest installer for your platform from the [Releases](../../releas
 
 ---
 
-### macOS
+### macOS *(Not supported)*
 
-> **Supported:** Apple Silicon (arm64) only.
+> **macOS is currently not supported.** The information below is kept for reference only.
 
 1. Download `MUV-VPN-x.x.x-arm64.dmg`
 2. Open the DMG and drag **MUV VPN** to Applications
 3. Run this once in Terminal to allow the app to open (required because the app is not code-signed):
-   ```bash
-   xattr -cr "/Applications/MUV VPN.app"
-   ```
+```bash
+xattr -cr "/Applications/MUV VPN.app"
+```
 4. Launch **MUV VPN** from Applications
 
 **Prerequisite:** `wireguard-tools` must be installed via Homebrew:
@@ -49,7 +53,7 @@ The app checks for updates automatically on launch.
 | Platform | Auto-update |
 |---|---|
 | Windows | Updates download silently in the background. You will be prompted to restart when a new version is ready. |
-| macOS | **Auto-update is not available** (the app is not code-signed). Download and install each new `.dmg` manually, then re-run `xattr -cr "/Applications/MUV VPN.app"`. |
+| macOS *(unsupported)* | Auto-update is not available (the app is not code-signed). Download and install each new `.dmg` manually, then re-run `xattr -cr "/Applications/MUV VPN.app"`. |
 
 ---
 
@@ -58,17 +62,17 @@ The app checks for updates automatically on launch.
 ### Windows — "Port already in use" error
 Another MUV VPN window or process is holding port 51821. Quit all MUV VPN instances and try again.
 
-### macOS — App won't open after update
+### macOS *(unsupported)* — App won't open after update
 Re-run the Gatekeeper bypass after every new installation:
 ```bash
 xattr -cr "/Applications/MUV VPN.app"
 ```
 
-### macOS — "wg-quick not found" error
+### macOS *(unsupported)* — "wg-quick not found" error
 Install WireGuard tools:
 ```bash
 brew install wireguard-tools
 ```
 
-### macOS — "muv0 already exists" on reconnect
+### macOS *(unsupported)* — "muv0 already exists" on reconnect
 This can happen if the app crashed without cleaning up. The app handles this automatically on the next connect attempt (it runs `wg-quick down` before `up`).
